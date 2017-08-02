@@ -13,6 +13,6 @@ feature "Create Article Index", type: :feature do
     expect(page).to have_content article.body
 
     expect(page).to have_content article.title
-    save_and_open_page
+
   end
 end
