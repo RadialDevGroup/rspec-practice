@@ -1,0 +1,5 @@
+<ul>
+  <% Article.all.pluck(:title).each do |title| %>
+    <li><%= title %></li>
+  <% end -%>
+</ul>

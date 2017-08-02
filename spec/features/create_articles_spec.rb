@@ -10,5 +10,8 @@ feature "Create Article" do
     expect do
       click_on 'Create Article'
     end.to change { Article.count }.by 1
+
+    expect(page).to have_content "New article created"
+    save_and_open_page
   end
 end

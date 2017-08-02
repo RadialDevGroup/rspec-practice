@@ -5,6 +5,11 @@ class ArticlesController < ApplicationController
 
   def create
     Article.create article_params
+
+    redirect_to new_article_path, notice: "New article created"
+  end
+
+  def index
   end
 
   private
