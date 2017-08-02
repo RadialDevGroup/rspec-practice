@@ -6,10 +6,11 @@ class ArticlesController < ApplicationController
   def create
     Article.create article_params
 
-    redirect_to new_article_path, notice: "New article created"
+    redirect_to articles_path, notice: "New article created"
   end
 
   def index
+    @articles = Article.all
   end
 
   private

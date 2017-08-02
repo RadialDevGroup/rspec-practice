@@ -1,5 +1,7 @@
+<%= link_to "New Article", new_article_path %>
+<hr>
 <ul>
-  <% Article.all.pluck(:title).each do |title| %>
-    <li><%= title %></li>
+  <% @articles.each do |article| %>
+    <li><%= article.title %></li>
   <% end -%>
 </ul>
